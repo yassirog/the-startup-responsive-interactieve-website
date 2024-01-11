@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Titel';
+    src: url('/fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff'),
+    url('/fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('/fonts/museosans-300-webfont.woff') format('woff'),
+    url('/fonts/museosans-300-webfont.woff2') format('woff2');
+}
+body {
+    ;
+}
+#logo {
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 15px; /* Adjust the height as needed */
+}
+
+#night {
+    height: 25px;
+}
+
+
+nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Voeg padding toe aan de zijkanten van de navbar */
+}
+
+h1 {
+    font-family: 'Titel';
+}
+
+p {
+    font-family: 'Tekst';
+}
+.Title {
+    margin-top: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+}

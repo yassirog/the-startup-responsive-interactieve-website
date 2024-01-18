@@ -1,17 +1,38 @@
 @font-face {
     font-family: 'Titel';
-    src: url('/fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff'),
-    url('/fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2') format('woff2');
+    src: url('../fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff'),
+    url('../fonts/radomir_tinkov_-_gilroy-bold-webfont.woff2') format('woff2');
 }
 
 @font-face {
     font-family: 'Tekst';
-    src: url('/fonts/museosans-300-webfont.woff') format('woff'),
-    url('/fonts/museosans-300-webfont.woff2') format('woff2');
+    src: url('../fonts/museosans-300-webfont.woff') format('woff'),
+    url('../fonts/museosans-300-webfont.woff2') format('woff2');
 }
-body {
+
+:root {
+    --base--black: #202020;
+    --base--grey-19: #4A4A4A;
+    --base--grey-62: #AAAAAA;
+    --base--grey-97: #F8F8F8;
+    --base--white: #ffffff;
+
+    --primary--yellow-accent: #E0B31E;
+    --primary--orange-accent: #E09B44;
+    --primary--blue-accent: #74C9C3;
+    --primary--green-accent: #7ABA4A;
     
+    --primary--yellow-background: #FCF7E8;
+    --primary--orange-background: #FCF5EC;
+    --primary--blue-background: #F1FAF9;
+    --primary--green-background: #F2F8ED;
 }
+
+
+body {
+    padding: 8px;
+}
+
 #logo {
     margin-top: 5px;
     margin-left: 5px;
@@ -22,6 +43,11 @@ body {
     height: 25px;
 }
 
+hr {
+    width: 50%; 
+    size: 3em;
+    color: black;
+}
 
 nav {
     overflow: hidden;
@@ -39,9 +65,11 @@ h1 {
 h2 {
     font-family: 'Titel';
 }
+
 p {
     font-family: 'Tekst';
 }
+
 .Title {
     margin-top: 3em;
     text-align: center;
@@ -71,5 +99,16 @@ p {
 
 .box {
     transition: opacity 0.5s ease-in-out;
-    display: none;
+    width: 100%;
+}
+
+.eerste-alinea {
+    margin-bottom: 3em;
+}
+
+
+/* M */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  
 }

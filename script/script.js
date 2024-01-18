@@ -19,30 +19,29 @@ counters.forEach( counter => {
    animate();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const boxes = document.querySelectorAll('.box');
-    let currentIndex = 0;
+// document.addEventListener("DOMContentLoaded", function() {
+//     const boxes = document.querySelectorAll('.box');
+//     let currentIndex = 0;
   
-    function showNextBox() {
-      // Verberg alle divs
-      boxes.forEach(box => box.classList.remove('active'));
+//     function showNextBox() {
+   
+//       boxes.forEach(box => box.classList.remove('active'));
   
-      // Toon de volgende div
-      boxes[currentIndex].classList.add('active');
-      currentIndex++;
+     
+//       boxes[currentIndex].classList.add('active');
+//       currentIndex++;
   
-      // Als het laatste div is bereikt, reset de index naar 0
-      if (currentIndex === boxes.length) {
-        currentIndex = 0;
-      }
+   
+//       if (currentIndex === boxes.length) {
+//         currentIndex = 0;
+//       }
   
-      // Roep de functie opnieuw aan na 2 seconden
-      setTimeout(showNextBox, 2000); // Pas de tijd (in milliseconden) tussen divs aan indien nodig
-    }
-  
-    // Initiële oproep om de autoplay te starten
-    showNextBox();
-  });
+    
+//       setTimeout(showNextBox, 2000);
+//     }
+
+//     showNextBox();
+//   });
 
   document.addEventListener("DOMContentLoaded", function() {
     const nightImage = document.getElementById('night');
@@ -53,20 +52,21 @@ document.addEventListener("DOMContentLoaded", function() {
     nightImage.addEventListener('click', function() {
     console.log('Image clicked!');
 
-    
-      // Check the current src attribute to determine which image is displayed
+    // Checkt welke foto aanstaat en doet ook gelijk dan de kleur veranderen van achtergrond
     if (nightImage.src.includes('dark.png')) {
         console.log('Switching to the second image');
         document.body.style.backgroundColor = "#202020";
 
 
-        // Change the image to the second one
+        // Verandert naar een nieuwe foto
         nightImage.src = 'assets/light.png';
+
+        // Als de nieuwe foto aanstaat en de code weer wordt uitgevoerd zal de oude foto gekozen worden
     } else if (nightImage.src.includes('light.png')){
         console.log('Switching back to the first image');
         document.body.style.backgroundColor = "#FFFFFF";
 
-        // Change the image back to the first one
+        // Oude foto word gekozen
         nightImage.src = 'assets/dark.png';
     }
     });
@@ -78,16 +78,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const logoImage = document.getElementById('logo');
   
     nightImage.addEventListener('click', function() {
-      // Toggle between white and original color for elements with class="color-change"
+ 
+      // Bij alle elementen met de class "color-change" wordt er geswitched tussen " " en "wit" als kleur.
       colorChangeElements.forEach(element => {
         if (element.style.color === 'white') {
-          element.style.color = ''; // Reset to original color (remove inline style)
+          element.style.color = '';
         } else {
-          element.style.color = 'white'; // Change to white
+          element.style.color = 'white';
         }
       });
   
-      // Toggle between the two logo images
+      // Tussen de 2 unc inc logo's switchen
       if (logoImage.src.endsWith('uncinc-logo-RGB-white.svg')) {
         logoImage.src = 'assets/uncinc-logo-RGB-black.svg';
       } else {

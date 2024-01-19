@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
     font-family: 'Titel';
     src: url('../fonts/radomir_tinkov_-_gilroy-bold-webfont.woff') format('woff'),
@@ -28,27 +29,7 @@
     --primary--green-background: #F2F8ED;
 }
 
-
-body {
-    padding: 8px;
-}
-
-#logo {
-    margin-top: 5px;
-    margin-left: 5px;
-    height: 15px; /* Adjust the height as needed */
-}
-
-#night {
-    height: 25px;
-}
-
-hr {
-    width: 50%; 
-    size: 3em;
-    color: black;
-}
-
+/* Navbar */
 nav {
     overflow: hidden;
     display: flex;
@@ -57,6 +38,34 @@ nav {
     padding: 0 20px; /* Voeg padding toe aan de zijkanten van de navbar */
 }
 
+body {
+    padding: 25px;
+}
+
+/* Alinea's */
+.results {
+    margin-bottom: 3em;
+}
+
+.box {
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+hr {
+    width: 50%; 
+    size: 3em;
+    color: var(--base--black);
+}
+
+.next-year {
+    display: flex;
+    text-align: center;
+}
+
+/* Text CSS */
 h1 {
     font-family: 'Titel';
     font-size: 2em;
@@ -64,6 +73,7 @@ h1 {
 
 h2 {
     font-family: 'Titel';
+    margin: auto;
 }
 
 p {
@@ -79,36 +89,64 @@ p {
 .procent {
     display: flex;
     font-family: Titel;
-    color: #73C9C3;
+    color: var(--primary--blue-accent);
 }
 
 .value {
     font-family: Titel;
     font-size: 2rem;
-    color: #73C9C3;
-    margin-right: 5px;
+    color: var(--primary--blue-accent);
+    margin-bottom: 20px;
 }
 
 .mid {
     text-align: center;
+    margin-top: 60px;
+    margin-bottom: 35px;
 }
 
-.margintop {
+.column {
     margin-top: 60px;
 }
 
-.box {
-    transition: opacity 0.5s ease-in-out;
-    width: 100%;
+.content {
+    margin-bottom: 60px;
+    display: grid; /* Gebruik grid voor de inhoud van de sectie */
+            grid-template-columns: repeat(3, 1fr); /* Drie kolommen van gelijke breedte */
+            gap: 20px; /* Voeg wat ruimte toe tussen de kolommen */
 }
 
-.eerste-alinea {
-    margin-bottom: 3em;
+/* Images and SVG Files */
+#logo {
+    margin-top: 5px;
+    margin-left: 5px;
+    height: 15px; /* Adjust the height as needed */
 }
+
+#text-icon {
+    height: 45px;
+}
+
+#night {
+    height: 25px;
+}
+
+.column-image {
+    height: auto;
+    width: 85vw;
+    display: block;
+    margin: 60px auto;
+ }
 
 
 /* M */
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  
+@media screen and (min-width: 768px) {
+    .results{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5 3em;
+    margin: 2em 0;
+    margin-bottom: 3em;
+    }
 }

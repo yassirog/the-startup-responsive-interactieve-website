@@ -12,6 +12,7 @@
 }
 
 :root {
+    /* Colors */
     --base--black: #202020;
     --base--grey-19: #4A4A4A;
     --base--grey-62: #AAAAAA;
@@ -27,6 +28,13 @@
     --primary--orange-background: #FCF5EC;
     --primary--blue-background: #F1FAF9;
     --primary--green-background: #F2F8ED;
+
+    /* Font */
+
+    --p-font-size: 1.2em;
+    --h1-font-size: 2.5em;
+    --h2-font-size: 2em;
+    --h3-font-size: 1.5em;
 }
 
 /* Navbar */
@@ -43,6 +51,12 @@ body {
 }
 
 /* Alinea's */
+.overflow {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
 .results {
     margin-bottom: 3em;
 }
@@ -68,12 +82,18 @@ hr {
 /* Text CSS */
 h1 {
     font-family: 'Titel';
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 h2 {
     font-family: 'Titel';
     margin: auto;
+    font-size: 2em;
+}
+
+h3 {
+    font-family: 'Titel';
+    font-size: 1.5em;
 }
 
 p {
@@ -81,9 +101,10 @@ p {
 }
 
 .Title {
-    margin-top: 3em;
     text-align: center;
-    margin-bottom: 50px;
+    margin: auto;
+    max-width: 80ch;
+    margin-bottom: 5em;
 }
 
 .procent {
@@ -111,9 +132,13 @@ p {
 
 .content {
     margin-bottom: 60px;
-    display: grid; /* Gebruik grid voor de inhoud van de sectie */
-            grid-template-columns: repeat(3, 1fr); /* Drie kolommen van gelijke breedte */
-            gap: 20px; /* Voeg wat ruimte toe tussen de kolommen */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.flex {
+    display: flex;
 }
 
 /* Images and SVG Files */
@@ -136,17 +161,46 @@ p {
     width: 85vw;
     display: block;
     margin: 60px auto;
- }
+}
 
 
-/* M */
+/* Tablet & Desktop Layout */
 
 @media screen and (min-width: 768px) {
     .results{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 5 3em;
+    gap: 3em;
     margin: 2em 0;
-    margin-bottom: 3em;
+    margin-bottom: 10em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5em;
+    }
+
+    p {
+        font-size: var(--p-font-size);
     }
 }
+
+@media screen and (max-width: 768px) {
+    .grid-our-work {
+        display: grid;
+        grid-template-columns: repeat(6, 300px);
+        gap: 5em;
+        overflow: scroll;
+    }
+
+    .grid-else {
+        display: grid;
+        grid-template-columns: repeat(5, 300px);
+        gap: 5em;
+        overflow: scroll;
+    }
+    
+
+}
+

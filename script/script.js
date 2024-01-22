@@ -121,10 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scrollables4.classList.remove("dark");
         scrollables4.classList.add("light");
       }
-  
-
-      document.body.classList.toggle(".dark::-webkit-scrollbar-track");
-    
+          
       // Tussen de 2 unc inc logo's switchen
       if (logoImage.src.endsWith('uncinc-logo-RGB-white.svg')) {
         logoImage.src = 'assets/uncinc-logo-RGB-black.svg';

@@ -148,6 +148,10 @@ p {
     height: 15px; /* Adjust the height as needed */
 }
 
+.icon {
+    height: 45px;
+}
+
 #text-icon {
     height: 45px;
 }

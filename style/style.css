@@ -57,6 +57,14 @@ body {
     white-space: nowrap;
 }
 
+.our-work {
+    max-width: 65vh;
+}
+
+.our-people p{
+    max-width: 65ch;
+}
+
 .results {
     margin-bottom: 3em;
 }
@@ -75,8 +83,12 @@ hr {
 }
 
 .next-year {
-    display: flex;
     text-align: center;
+}
+
+.next-year p {
+    max-width: 65ch;
+    margin: 0 auto;
 }
 
 /* Text CSS */
@@ -130,6 +142,11 @@ p {
     margin-top: 60px;
 }
 
+.column p {
+    max-width: 65ch;
+
+}
+
 .content {
     margin-bottom: 60px;
     display: grid;
@@ -175,6 +192,7 @@ p {
     body {
         padding: 50px;
     }
+
     .results {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -189,10 +207,16 @@ p {
         gap: 5em;
     }
 
+    .grid p {
+        max-width: 65ch;
+    }
+
     p {
         font-size: var(--p-font-size);
     }
 }
+
+/* Phone Layout */
 
 @media screen and (max-width: 768px) {
     .grid-our-work {

@@ -22,8 +22,6 @@ counters.forEach( counter => {
   document.addEventListener("DOMContentLoaded", function() {
     const nightImage = document.getElementById('night');
     const body = document.getElementsByName('body');
-    var col = document.getElementById("tekst");
-
 
     nightImage.addEventListener('click', function() {
     console.log('Image clicked!');
@@ -87,7 +85,46 @@ document.addEventListener("DOMContentLoaded", function() {
           element.style.color = 'white';
         }
       });
+
+      let scrollables = document.getElementById("scrollable");
+      if (scrollables.classList.contains('light')) {
+        scrollables.classList.remove("light");
+        scrollables.classList.add("dark");
+      } else {
+        scrollables.classList.remove("dark");
+        scrollables.classList.add("light");
+      }
+
+      let scrollables2 = document.getElementById("scrollable2");
+      if (scrollables2.classList.contains('light')) {
+        scrollables2.classList.remove("light");
+        scrollables2.classList.add("dark");
+      } else {
+        scrollables2.classList.remove("dark");
+        scrollables2.classList.add("light");
+      }
+
+      let scrollables3 = document.getElementById("scrollable3");
+      if (scrollables3.classList.contains('light')) {
+        scrollables3.classList.remove("light");
+        scrollables3.classList.add("dark");
+      } else {
+        scrollables3.classList.remove("dark");
+        scrollables3.classList.add("light");
+      }
+
+      let scrollables4 = document.getElementById("scrollable4");
+      if (scrollables4.classList.contains('light')) {
+        scrollables4.classList.remove("light");
+        scrollables4.classList.add("dark");
+      } else {
+        scrollables4.classList.remove("dark");
+        scrollables4.classList.add("light");
+      }
   
+
+      document.body.classList.toggle(".dark::-webkit-scrollbar-track");
+    
       // Tussen de 2 unc inc logo's switchen
       if (logoImage.src.endsWith('uncinc-logo-RGB-white.svg')) {
         logoImage.src = 'assets/uncinc-logo-RGB-black.svg';
@@ -128,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (humanCentered.src.endsWith('human-centered.svg')) {
         humanCentered.src = 'assets/human-centered-light.svg';
       } else {
-        humanCentered.src = 'assets/human-centered';
+        humanCentered.src = 'assets/human-centered.svg';
       }
 
       if (education.src.endsWith('education.svg')) {
@@ -220,10 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
         ems.src = 'assets/purpose-driven-clients.svg';
       }
-
-
-
-      
+  
     });
   });
   

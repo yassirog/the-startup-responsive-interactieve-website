@@ -16,6 +16,7 @@ Welkom op mijn Github pagina die over de Impact Report (informatie pagina) gaat 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 Dit project omvat een Squad page dat gemaakt is in `VisualCode`.
+
 Mijn website is [hier](https://yassirog.github.io/the-startup-responsive-interactieve-website/) live te zien 
 
 ## 💎 Kenmerken

@@ -27,6 +27,7 @@ Dit project is gemaakt met HTML, CSS en JS. Verder staat hieronder nog een korte
 
 - 🖥️ VSCode
 - 📷 Photoshop
+- ✍️ Figma
 
 **Methodes en Technieken**
 

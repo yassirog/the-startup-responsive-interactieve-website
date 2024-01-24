@@ -26,6 +26,7 @@ Dit project is gemaakt met HTML, CSS en JS. Verder staat hieronder nog een korte
 **Tools**
 
 - 🖥️ VSCode
+- 📷 Photoshop
 
 **Methodes en Technieken**
 

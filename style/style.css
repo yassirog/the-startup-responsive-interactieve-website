@@ -43,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Voeg padding toe aan de zijkanten van de navbar */
+    padding: 0 20px;
 }
 
 body {
@@ -71,11 +71,25 @@ body {
     margin-bottom: 3em;
 }
 
+.column {
+    margin-top: 60px;
+    & p {
+        max-width: 65ch;
+    }
+}
+
 .box {
     transition: opacity 0.5s ease-in-out;
     width: 100%;
     margin-top: 50px;
     margin-bottom: 30px;
+}
+
+.content {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 hr {
@@ -95,22 +109,23 @@ hr {
 /* Text CSS */
 h1 {
     font-family: 'Titel';
-    font-size: 2.5em;
+    font-size: var(--h1-font-size);
 }
 
 h2 {
     font-family: 'Titel';
     margin: auto;
-    font-size: 2em;
+    font-size: var(--h2-font-size);
 }
 
 h3 {
     font-family: 'Titel';
-    font-size: 1.5em;
+    font-size: var(--h3-font-size);
 }
 
 p {
     font-family: 'Tekst';
+    font-size: var(--p-font-size);
 }
 
 .Title {
@@ -128,7 +143,7 @@ p {
 
 .value {
     font-family: Titel;
-    font-size: 2rem;
+    font-size: var(--h2-font-size);
     color: var(--primary--blue-accent);
     margin-bottom: 20px;
 }
@@ -139,21 +154,6 @@ p {
     margin-bottom: 35px;
 }
 
-.column {
-    margin-top: 60px;
-    & p {
-        max-width: 65ch;
-
-    }
-}
-
-.content {
-    margin-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
 .flex {
     display: flex;
 }
@@ -162,7 +162,7 @@ p {
 #logo {
     margin-top: 5px;
     margin-left: 5px;
-    height: 15px; /* Adjust the height as needed */
+    height: 15px;
 }
 
 .icon {
@@ -188,7 +188,6 @@ p {
 /* Tablet & Desktop Layout */
 
 @media screen and (min-width: 768px) {
-
     body {
         padding: 50px;
     }
@@ -218,6 +217,8 @@ p {
 /* Phone Layout */
 
 @media screen and (max-width: 768px) {
+
+/* Grid for 6 columns */
     .grid-our-work {
         display: grid;
         grid-template-columns: repeat(6, 300px);
@@ -226,6 +227,7 @@ p {
         overflow-y: hidden;
     }
 
+/* Grid for 5 columns */
     .grid-else {
         display: grid;
         grid-template-columns: repeat(5, 300px);
@@ -234,46 +236,38 @@ p {
         overflow-y: hidden;
     }
 
+/* Lightmode scroll */
     .light::-webkit-scrollbar {
-        -webkit-appearance: none;
+        width: 4px;
+        border: 1px solid var(--base--grey-97);
+        border-radius: 20px;
     }
-    
-    .light::-webkit-scrollbar:vertical {
-        width: 12px;
-    }
-    
-    .light::-webkit-scrollbar:horizontal {
-        height: 12px;
-    }
-    
-    .light::-webkit-scrollbar-thumb {
-        background-color: rgba(0, 0, 0, .5);
-        border-radius: 10px;
-        border: 2px solid #ffffff;
-    }
-    
+
     .light::-webkit-scrollbar-track {
+        border-radius: 20px;
+        background: var(--base--grey-97);
+    }
+
+    .light::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background-color: #ffffff;
+        background: var(--base--black);
     }
 
 /* Darkmode scroll */
+    .dark::-webkit-scrollbar {
+        width: 4px;
+        border: 1px solid var(--base--white);
+        border-radius: 20px;
+    }
 
-.dark::-webkit-scrollbar {
-    width: 4px;
-    border: 1px solid #fff;
-  border-radius: 20px;
-}
+    .dark::-webkit-scrollbar-track {
+        border-radius: 20px;
+        background: var(--base--grey-62);
+    }
 
-.dark::-webkit-scrollbar-track {
-    border-radius: 20px;
-    background: #676767;
-  }
-
-.dark::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: #ffffff;
-  }
-
+    .dark::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: var(--base--white);
+    }
 }
 

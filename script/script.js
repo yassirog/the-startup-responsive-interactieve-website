@@ -9,6 +9,7 @@ counters.forEach( counter => {
       const time = value / speed;
      if(data < value) {
           counter.innerText = Math.ceil(data + time);
+          // Kijk eens naar requestAnimationFrame
           setTimeout(animate, 15);
         }else{
           counter.innerText = value;
@@ -19,32 +20,31 @@ counters.forEach( counter => {
    animate();
 });
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const nightImage = document.getElementById('night');
-    const body = document.getElementsByName('body');
 
-    nightImage.addEventListener('click', function() {
-    console.log('Image clicked!');
+  const nightImage = document.getElementById('night');
+  const body = document.getElementsByName('body');
 
-    // Checkt welke foto aanstaat en doet ook gelijk dan de kleur veranderen van achtergrond
-    if (nightImage.src.includes('dark.png')) {
-        console.log('Switching to the second image');
-        document.body.style.backgroundColor = "#202020";
+  nightImage.addEventListener('click', function() {
+  console.log('Image clicked!');
+
+  // Checkt welke foto aanstaat en doet ook gelijk dan de kleur veranderen van achtergrond
+  if (nightImage.src.includes('dark.png')) {
+      console.log('Switching to the second image');
+      document.body.style.backgroundColor = "#202020";
 
 
-        // Verandert naar een nieuwe foto
-        nightImage.src = 'assets/light.png';
+      // Verandert naar een nieuwe foto
+      nightImage.src = 'assets/light.png';
 
-        // Als de nieuwe foto aanstaat en de code weer wordt uitgevoerd zal de oude foto gekozen worden
-    } else if (nightImage.src.includes('light.png')){
-        console.log('Switching back to the first image');
-        document.body.style.backgroundColor = "#FFFFFF";
+      // Als de nieuwe foto aanstaat en de code weer wordt uitgevoerd zal de oude foto gekozen worden
+  } else if (nightImage.src.includes('light.png')){
+      console.log('Switching back to the first image');
+      document.body.style.backgroundColor = "#FFFFFF";
 
-        // Oude foto word gekozen
-        nightImage.src = 'assets/dark.png';
-    }
-    });
-});
+      // Oude foto word gekozen
+      nightImage.src = 'assets/dark.png';
+  }
+  });
 
 document.addEventListener("DOMContentLoaded", function() {
     const nightImage = document.getElementById('night');

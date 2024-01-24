@@ -2,6 +2,8 @@
 
 # Titel
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+![isolated_tablet_laptop_and_smartphone_composition](https://github.com/yassirog/the-startup-responsive-interactieve-website/assets/144006281/3e28a481-cdc9-45b2-9375-0b8d9bd35b90)
+
 
 ## Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
